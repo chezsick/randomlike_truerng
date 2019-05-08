@@ -2,13 +2,7 @@
 set_time_limit(0);
 require("randlib.php");
 $frame = $_GET["frame"];
-$limit_frame = 999999;
 header("Content-Type:text/plain");
-if ($frame > $limit_frame)
-{
-echo "C'est Limité à ".$limit_frame." Désoler Mais Ne Gaspiller Pas Non Plus";
-exit(1);
-}
 $cold_hot = floatval($_GET["cold_hot"]); // Negative = Cold = 0;Positive = Hot
 $cloud_sun = floatval($_GET["cloud_sun"]); // Negative = Cloud;Positive = Sun
 $cloud_rain = floatval($_GET["cloud_rain"]); // Negative = Cloud;Positive = Rain,Active If Cloud In sun_cloud Variable
